@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta del Tiempo - Noa Suárez Brito</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+        <!-- Sección de búsqueda de ciudad -->
+        <div class="search">
+            <input type="text" placeholder="Ingrese ciudad" spellcheck="false">
+            <button> <img src="images/lupa.png"></button> <!-- Botón con ícono de búsqueda -->
+        </div>
+
+        <div class="weather">
+            <img src="images/sol.png" class="weather-icon" id="weatherIcon"> <!-- Icono dinámico del clima -->
+            <h2 class="city">Las Palmas</h2> <!-- Ciudad actual mostrada -->
+
+            <!-- Contenedores de información de temperatura y humedad -->
+            <div class="info-container">
+                <div class="info-box">
+                    <p><b>Temperatura</b></p>
+                    <div class="donut-container"> <!-- Diseño de estilo gráfico tipo "donut" -->
+                        <div class="donut-body">
+                            <div class="donut-fill" id="tempFill"></div> <!-- Nivel de temperatura -->
+                            <div class="g102cover">
+                                <span class="temp">21°C</span> <!-- Muestra la temperatura actual -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <p><b>Humedad</b></p>
+                    <div class="donut-container">
+                        <div class="donut-body">
+                            <div class="donut-fill" id="humidityFill"></div> <!-- Nivel de humedad -->
+                            <div class="g102cover">
+                                <span class="humidity">73%</span> <!-- Muestra la humedad actual -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Información de salida y puesta del sol -->
+            <div class="sun-info">
+                <div class="text">
+                    <div>
+                        <p><b>Salida del sol: </b><span class="sunrise">8:01</span></p>
+                        <p><b>Atardecer: </b><span class="sunset">19:18</span></p>
+                    </div>
+                    <img id="sunImage" src="images/salida_sol.png" alt="Estado del sol" class="sun-image"> <!-- Imagen dinámica del sol -->
+                </div>
+            </div>
+
+            <!-- Información de la velocidad del viento -->
+            <div class="additional-info">
+                <div class="info-item">
+                    <p><b>Velocidad del viento: </b><span class="wind">6 km/h</span></p> <!-- Viento actual -->
+                </div>
+            </div>
+
+            <!-- Información de la fase lunar y luminosidad -->
+            <div class="lunar-info">
+                <div class="text">
+                    <p><b>Fase lunar: </b>Gibosa Menguante</p>
+                    <p><b>Luminosidad lunar: </b>80%</p>
+                </div>
+                <img src="images/luna.png" alt="Luna" class="moon-image"> <!-- Imagen de la luna -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

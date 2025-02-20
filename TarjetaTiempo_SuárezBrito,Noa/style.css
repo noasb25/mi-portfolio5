@@ -1,0 +1,213 @@
+/* Configuración inicial de márgenes, fuentes y fondo */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Estilo de la tarjeta principal */
+.card {
+    width: 90%;
+    max-width: 470px;
+    background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+/* Unificación del tamaño de la fuente en todas las cajas */
+.info-container p, .sun-info p, .additional-info p, .lunar-info p {
+    font-size: 18px; /* Tamaño de fuente uniforme */
+    font-family: 'Poppins', sans-serif; /* Aseguramos que todas usen la misma fuente */
+    font-weight: normal;
+    color: #fff;
+}
+
+/* Configuración de las cajas de búsqueda y elementos de clima */
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.weather-icon {
+    width: 120px;
+    margin-top: 20px;
+}
+
+.weather h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.info-box {
+    background: rgba(255, 255, 255, 0.1); /* Caja semitransparente para temperatura y humedad */
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 45%;
+}
+
+/* Estilos gráficos para la representación en forma de donut */
+.donut-container {
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.donut-body {
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    background: rgb(214, 214, 214);
+    position: relative;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+    overflow: hidden;
+}
+
+.donut-fill {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: 100%;
+    transform-origin: center top;
+    transform: rotate(0deg);
+    transition: transform 0.5s ease-out;
+    background: hwb(209 46% 0%);
+}
+
+.g102cover {
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+    position: absolute;
+    bottom: -5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: black;
+    z-index: 2;
+}
+
+/* Caja combinada para la salida del sol y el atardecer */
+.sun-info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sun-info .text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.sun-info p {
+    margin: 5px 0;
+}
+
+.sun-info .sun-image {
+    width: 90px;   /* Tamaño fijo */
+    height: 55px;  /* Tamaño fijo */
+    margin-left: 20px;
+}
+
+/* Caja combinada para la fase lunar y la imagen de la luna */
+.lunar-info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+.lunar-info .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lunar-info p {
+    margin: 5px 0;
+}
+
+.lunar-info .moon-image {
+    width: 50px;   
+    height: 50px; 
+    margin-right: 20px;
+}
+
+/* Ajuste de las cajas adicionales, como la velocidad del viento */
+.additional-info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    text-align: center;
+}
